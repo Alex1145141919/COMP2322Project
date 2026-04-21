@@ -1,5 +1,4 @@
 // MultiThreadWebServer.java
-// 整合阶段5~9：多线程 + GET/HEAD + 五种状态码 + Last-Modified/304 + keep-alive + 日志
 import java.io.*;
 import java.net.*;
 import java.time.LocalDateTime;
@@ -180,7 +179,7 @@ class ClientHandler implements Runnable {
                 if (!keepAlive) {
                     break;
                 }
-            } // end while keepAlive
+            }
 
             socket.close();
             System.out.println("[" + threadName + "] 连接关闭");
